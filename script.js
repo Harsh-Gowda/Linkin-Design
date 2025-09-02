@@ -21,3 +21,34 @@ document.addEventListener('DOMContentLoaded', () => {
     overlay.classList.add('opacity-0');
   });
 });
+
+
+// ---- contact form code-----
+
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+
+  // Save data to Google Sheet
+  sheet.appendRow([
+    new Date(),
+    data.name,
+    data.email,
+    data.message
+  ]);
+
+  // Send email
+  MailApp.sendEmail({
+    to: "iamharishgowdaujire@gmail.com",  // replace with your email
+    subject: "New Contact Form Submission",
+    htmlBody: `
+      <p><b>Name:</b> ${data.name}</p>
+      <p><b>Email:</b> ${data.email}</p>
+      <p><b>Message:</b> ${data.message}</p>
+    `
+  });
+
+  return ContentService.createTextOutput(
+    JSON.stringify({ result: "success", data: data })
+  ).setMimeType(ContentService.MimeType.JSON);
+}
