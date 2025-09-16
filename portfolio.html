@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Personal Website</title>
   <script src="https://cdn.tailwindcss.com"></script>
@@ -13,73 +14,106 @@
 
 <body>
 
-<body class="h-screen">
+  <body class="h-screen">
 
-<div class="flex h-full">
-  <!-- Sidebar (Left Section) -->
-  <div id="sidebar"
-       class="fixed md:static top-0 left-0 h-full w-[70%] md:w-[20%] bg-[#000000] transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
-    <div class="p-5 bg-[#000000] h-full flex flex-col ">
-      
-      <!-- Profile -->
-      <div class="profile p-5 rounded-lg text-center mb-2 ">
-        <img src="./Asset/Profile.png" alt="Profile Photo"
-             class="w-32 h-32 rounded-full shadow-lg border-4 border-white object-cover mx-auto ">
-        <h3 class="text-[#ffffff] mb-2 mt-2">Harsh Gowda</h3>
-        <!-- Social -->
-        <div class="flex items-center justify-center gap-5  text-xl">
-          <a href="https://www.instagram.com/harsh_____gowda?igsh=a2R5NGlxajU1OXhv"><i class="fa-brands fa-instagram text-[#ffffff]"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook text-[#ffffff]"></i></a>
-          <a href="#"><i class="fa-brands fa-whatsapp text-[#ffffff]"></i></a>
-          <a href="https://www.instagram.com/harsh_____gowda?igsh=a2R5NGlxajU1OXhv"><i class="fa-brands fa-instagram text-[#ffffff]"></i></a>
+    <div class="flex h-full">
+      <!-- Sidebar (Left Section) -->
+      <div id="sidebar"
+        class="fixed md:static top-0 left-0 h-full w-[70%] md:w-[20%] bg-[#000000] transform -translate-x-full md:translate-x-0 transition-transform duration-300 z-50">
+        <div class="p-5 bg-[#000000] h-full flex flex-col ">
 
-          <a href="#"><i class="fa-brands fa-whatsapp text-[#ffffff]"></i></a>
-          <a href="#"><i class="fa-brands fa-facebook text-[#ffffff]"></i></a>
+          <!-- Profile -->
+          <div class="profile p-5 rounded-lg text-center mb-2 ">
+            <img src="./Asset/Harsh-New.png" alt="Profile Photo"
+              class="w-32 h-32 rounded-full shadow-lg border-4 border-white object-cover mx-auto ">
+            <h3 class="text-[#ffffff] mb-2 mt-2">Harsh Gowda</h3>
+            <!-- Social -->
+            <div class="flex items-center justify-center gap-5  text-xl">
+              <a href="https://www.instagram.com/harsh_____gowda?igsh=a2R5NGlxajU1OXhv"><i
+                  class="fa-brands fa-instagram text-[#ffffff]"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook text-[#ffffff]"></i></a>
+              <a href="#"><i class="fa-brands fa-whatsapp text-[#ffffff]"></i></a>
+              <a href="https://www.instagram.com/harsh_____gowda?igsh=a2R5NGlxajU1OXhv"><i
+                  class="fa-brands fa-instagram text-[#ffffff]"></i></a>
 
+              <a href="#"><i class="fa-brands fa-whatsapp text-[#ffffff]"></i></a>
+              <a href="#"><i class="fa-brands fa-facebook text-[#ffffff]"></i></a>
+
+            </div>
+          </div>
+
+          <!-- Menu -->
+          <div class="menu  px-5 rounded">
+            <ul class="space-y-3 text-lg">
+              <li><a href="#home" class="hover:text-blue-600 text-[#ffffff]"><i
+                    class="fa-solid fa-house mr-4"></i>Home</a></li>
+              <li><a href="#about" class="hover:text-blue-600 text-[#ffffff]"><i
+                    class="fa-regular fa-user mr-4"></i>About</a></li>
+              <li><a href="#projects" class="hover:text-blue-600 text-[#ffffff]"><i
+                    class="fa-regular fa-file mr-4"></i>Resume</a></li>
+              <li><a href="#contact" class="hover:text-blue-600 text-[#ffffff]"><i
+                    class="fa-regular fa-message mr-4"></i></i>Contact</a></li>
+            </ul>
+          </div>
         </div>
       </div>
 
-      <!-- Menu -->
-      <div class="menu  px-5 rounded">
-        <ul class="space-y-3 text-lg">
-          <li><a href="#home" class="hover:text-blue-600 text-[#ffffff]"><i class="fa-solid fa-house mr-4"></i>Home</a></li>
-          <li><a href="#about" class="hover:text-blue-600 text-[#ffffff]"><i class="fa-regular fa-user mr-4"></i>About</a></li>
-          <li><a href="#projects" class="hover:text-blue-600 text-[#ffffff]"><i class="fa-regular fa-file mr-4"></i>Resume</a></li>
-          <li><a href="#contact" class="hover:text-blue-600 text-[#ffffff]"><i class="fa-regular fa-message mr-4"></i></i>Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
+      <!-- Right Section -->
+      <div class="flex-1 bg-green-200 ">
+       
 
-  <!-- Right Section -->
-  <div class="flex-1 bg-green-200 ">
-    <!-- Mobile Topbar -->
-    <div class="md:hidden flex justify-between items-center mb-6">
-      <h2 class="text-xl font-bold">My Portfolio</h2>
-      <button id="menu-btn" class="text-2xl">
+
+           <!-- <div class="md:hidden flex justify-end  items-center  mb-6">
+           <h2 class="text-xl font-bold">My Portfolio</h2>
+          <button id="menu-btn" class="text-2xl">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+        </div> -->
+
+
+
+        <!-- Content -->
+        <div class="relative w-full h-[400px] mb-10">
+          <img src="./Asset/Hero my.png" alt="Harsh-Image" width="100%" height="400px"
+            class="aos-init aos-animate object-cover">
+
+            
+             <div class="absolute top-4 right-4 md:hidden flex items-center z-20">
+      
+      <button id="menu-btn" class="text-2xl text-white">
         <i class="fa-solid fa-bars"></i>
       </button>
     </div>
+          <div class="absolute inset-0 flex flex-col items-start justify-center text-white px-10 mb-20">
+            <h1 class="mb:text-2xl text-4xl font-bold mb-2">Welcome to My Portfolio</h1>
+              <p class="text-lg">
+                    <span id="changing-text" class="font-semibold"></span>
+              </p>
+            <button class="mt-4 px-6 py-2 bg-blue-600 rounded-lg hover:bg-blue-700">Hire Me</button>
+          </div>
+        </div>
 
-    <!-- Content -->
-    
-    <img src="./Asset/hero image.jpg" alt="Harsh-Image" width="1600px" height="500px" class="aos-init aos-animate">
-    <h2 class="text-2xl font-bold">Right Side Content</h2>
-    <p class="mt-4">This is your main content area.</p>
-  </div>
-</div>
+
+
+      </div>
 
 
 
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const sidebar = document.getElementById("sidebar");
+      <script>
+        const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
 
-  menuBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("-translate-x-full");
-  });
+        menuBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("-translate-x-full");
+        });
+      </script>
+
+     
+
 </script>
+      
+  <script src="./script.js"></script>
 
-    
-</body>
+  </body>
+
 </html>

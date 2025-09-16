@@ -23,3 +23,17 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+////  Animation text
+
+  const roles = ["Web Developer", "Designer", "Creator"];
+  let index = 0;
+  const textElement = document.getElementById("changing-text");
+
+  function changeText() {
+    textElement.textContent = roles[index];
+    index = (index + 1) % roles.length; // Loop back after last item
+  }
+
+  // Change every 2 seconds
+  changeText(); // Initial text
+  setInterval(changeText, 2000);
