@@ -2,12 +2,23 @@
 
 // Mobile screen Menu 
 
-   const menuBtn = document.getElementById("menu-btn");
-        const sidebar = document.getElementById("sidebar");
+  const menuBtn = document.getElementById("menu-btn");
+const sidebar = document.getElementById("sidebar");
 
-        menuBtn.addEventListener("click", () => {
-          sidebar.classList.toggle("-translate-x-full");
-        });
+// Toggle menu when clicking icon
+menuBtn.addEventListener("click", () => {
+  sidebar.classList.toggle("-translate-x-full");
+});
+
+// Close sidebar if clicking outside of it
+document.addEventListener("click", (event) => {
+  const isClickInsideSidebar = sidebar.contains(event.target);
+  const isClickOnMenuBtn = menuBtn.contains(event.target);
+
+  if (!isClickInsideSidebar && !isClickOnMenuBtn && window.innerWidth < 768) {
+    sidebar.classList.add("-translate-x-full");
+  }
+});
 
 //  Animation text
 
