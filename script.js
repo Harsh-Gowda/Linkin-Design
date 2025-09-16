@@ -1,31 +1,17 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const menuButton = document.getElementById('mobile-menu-button');
-  const closeMenuButton = document.getElementById('close-menu-button');
-  const mobileMenuWrapper = document.getElementById('mobile-menu-wrapper');
-  const overlay = document.getElementById('overlay');
-
-  menuButton.addEventListener('click', () => {
-    mobileMenuWrapper.classList.remove('translate-x-full');
-    overlay.classList.remove('opacity-0');
-  });
-
-  // This is the new event listener
-  closeMenuButton.addEventListener('click', () => {
-    mobileMenuWrapper.classList.add('translate-x-full');
-    overlay.classList.add('opacity-0');
-  });
-
-  // You can also close the menu by clicking the overlay
-  overlay.addEventListener('click', () => {
-    mobileMenuWrapper.classList.add('translate-x-full');
-    overlay.classList.add('opacity-0');
-  });
-});
 
 
-////  Animation text
+// Mobile screen Menu 
 
-  const roles = ["Web Developer", "Designer", "Creator"];
+   const menuBtn = document.getElementById("menu-btn");
+        const sidebar = document.getElementById("sidebar");
+
+        menuBtn.addEventListener("click", () => {
+          sidebar.classList.toggle("-translate-x-full");
+        });
+
+//  Animation text
+
+  const roles = ["Web Developer", "Wordpress Developer", "Ecommerce Developer", "Front-end Developer",];
   let index = 0;
   const textElement = document.getElementById("changing-text");
 

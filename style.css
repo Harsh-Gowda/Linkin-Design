@@ -3,6 +3,7 @@
 
 body {
   font-family: 'Libertinus Sans', sans-serif;
+  height: 100%;
 }
 .libertinus-sans-regular {
   font-family: "Libertinus Sans", sans-serif;
@@ -23,4 +24,7 @@ body {
 }
 body.website{
     font-family: 'Libertinus Sans', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
 }
