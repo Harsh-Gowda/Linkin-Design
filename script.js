@@ -34,3 +34,31 @@ document.addEventListener("click", (event) => {
   // Change every 2 seconds
   changeText(); // Initial text
   setInterval(changeText, 2000);
+
+
+  //contact form
+
+
+  const form = document.getElementById("contact-form");
+  const message = document.getElementById("form-message");
+
+  form.addEventListener("submit", async function (e) {
+    e.preventDefault();
+
+    const formData = new FormData(form);
+    let response = await fetch(form.action, {
+      method: form.method,
+      body: formData
+    });
+
+    if (response.ok) {
+      message.textContent = "✅ Your message has been sent successfully!";
+      message.classList.remove("hidden", "text-red-500");
+      message.classList.add("text-green-500");
+      form.reset();
+    } else {
+      message.textContent = "❌ Oops! Something went wrong. Please try again.";
+      message.classList.remove("hidden", "text-green-500");
+      message.classList.add("text-red-500");
+    }
+  });
