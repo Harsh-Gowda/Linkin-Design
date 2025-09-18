@@ -64,3 +64,17 @@ document.addEventListener("click", (event) => {
       message.classList.add("text-red-500");
     }
   });
+
+
+  // Id remove
+
+  function scrollToSection(id) {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: "smooth" });
+
+      // remove the hash from URL
+      history.pushState(null, null, ' ');
+    }
+  }
+
