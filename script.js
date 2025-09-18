@@ -46,7 +46,9 @@ document.addEventListener("click", (event) => {
     e.preventDefault();
 
     const formData = new FormData(form);
-    let response = await fetch(form.action, {
+    let response = await fetch
+    (form.action,
+    {
       method: form.method,
       body: formData
     });
